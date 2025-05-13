@@ -9,7 +9,6 @@ def movie_to_dict(movie):
         'title': movie.title,
         'imdb_title_id': movie.imdb_title_id,
         'original_title': movie.original_title,
-        'year': movie.year,
         'date_published': movie.date_published,
         'genre': movie.genre,
         'duration': movie.duration,
@@ -30,19 +29,14 @@ def movie_to_dict(movie):
         'reviews_from_critics': movie.reviews_from_critics
     }
 
-@movie_bp.route('/movies/<int:id>', methods=['GET'])
-def get_movie_by_id(id):
-    movie = Movie.query.get_or_404(id)  
-    return jsonify(movie_to_dict(movie)) 
-
 @movie_bp.route('/movies', methods=['GET'])
 def get_movies_by_title():
-    title_query = request.args.get('title')  # Obtener el valor del parámetro "title"
+    title_query = request.args.get('title')
     
     if title_query:
-        print('title_query:', title_query)
-        # Filtrar por título (case-insensitive)
         movies = Movie.query.filter(Movie.title.ilike(f'%{title_query}%')).all()
+        if not movies:
+            return jsonify({'error': 'No movies found with the given title'}), 404
     else:
         movies = Movie.query.all()
 
