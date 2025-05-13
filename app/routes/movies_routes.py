@@ -1,4 +1,4 @@
-from flask import Blueprint, jsonify
+from flask import Blueprint, jsonify, request
 from app.models.movie import db, Movie
 
 movie_bp = Blueprint('movie_bp', __name__)
@@ -30,13 +30,21 @@ def movie_to_dict(movie):
         'reviews_from_critics': movie.reviews_from_critics
     }
 
-@movie_bp.route('/movies', methods=['GET'])
-def get_movies():
-    movies = Movie.query.all()  
-    movies_list = [movie_to_dict(movie) for movie in movies]  
-    return jsonify(movies_list)  
-
 @movie_bp.route('/movies/<int:id>', methods=['GET'])
-def get_movie(id):
+def get_movie_by_id(id):
     movie = Movie.query.get_or_404(id)  
     return jsonify(movie_to_dict(movie)) 
+
+@movie_bp.route('/movies', methods=['GET'])
+def get_movies_by_title():
+    title_query = request.args.get('title')  # Obtener el valor del parámetro "title"
+    
+    if title_query:
+        print('title_query:', title_query)
+        # Filtrar por título (case-insensitive)
+        movies = Movie.query.filter(Movie.title.ilike(f'%{title_query}%')).all()
+    else:
+        movies = Movie.query.all()
+
+    movies_list = [movie_to_dict(m) for m in movies]
+    return jsonify(movies_list)
