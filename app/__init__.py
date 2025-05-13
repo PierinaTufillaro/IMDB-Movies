@@ -1,10 +1,14 @@
 from flask import Flask
+from .config import Config
+from .models.movie import db
 
 def create_app():
     app = Flask(__name__)
-    app.config.from_object('app.config.Config')
+    app.config.from_object(Config)
 
-    from app import routes  # Fix import statement
-    app.register_blueprint(routes.main)
+    db.init_app(app)
+
+    with app.app_context():
+        db.create_all()  # 🔥 Esto crea la base y las tablas
 
     return app
