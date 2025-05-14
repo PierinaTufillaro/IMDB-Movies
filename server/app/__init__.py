@@ -2,6 +2,7 @@ from flask import Flask
 from .config import Config
 from .models.movie import db
 from app.routes.movies_routes import movie_bp
+from flask_cors import CORS
 
 
 def create_app():
@@ -12,7 +13,9 @@ def create_app():
         app: A Flask application instance.
     """
     app = Flask(__name__)
+    CORS(app)
     app.config.from_object(Config)
+    
     app.register_blueprint(movie_bp, url_prefix="/api")
 
     db.init_app(app)
