@@ -1,0 +1,134 @@
+/* General Styles */
+.app-container {
+  text-align: center;
+  padding: 20px;
+  font-family: "Arial", sans-serif;
+  background-color: #121212;
+  color: #fff;
+}
+
+h1 {
+  font-size: 2.5em;
+  color: #fbc02d;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+/* Styles for the search bar */
+.search-bar-container {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+input[type="text"] {
+  padding: 10px;
+  font-size: 1em;
+  width: 60%;
+  max-width: 400px;
+  border-radius: 5px;
+  border: 1px solid #444;
+  background-color: #333;
+  color: #fff;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border-color: #fbc02d;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #fbc02d;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+button:hover {
+  background-color: #f57f17;
+}
+
+button:disabled {
+  background-color: #cccccc;
+}
+
+/* Styles for movie list */
+.movie-list-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Three columns per row */
+  gap: 20px;
+  justify-content: center;
+  margin-top: 30px;
+  padding: 0 20px;
+}
+
+/* Styles for movie card */
+.movie-card {
+  background-color: #1e1e1e;
+  padding: 20px;
+  margin: 15px 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  text-align: left;
+  transition: transform 0.3s ease-in-out;
+  color: #fff;
+}
+
+.movie-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+}
+
+.movie-card h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: #fbc02d;
+}
+
+.movie-card p {
+  font-size: 1em;
+  line-height: 1.6;
+  color: #ddd;
+}
+
+.movie-card p strong {
+  font-weight: bold;
+  color: #fbc02d;
+}
+
+/* Styles for button pagination */
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 20px;
+}
+
+.pagination-container button {
+  padding: 10px 20px;
+  font-size: 1em;
+  background-color: #fbc02d;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.pagination-container button:hover {
+  background-color: #f57f17;
+
+  .pagination-container button:disabled {
+    background-color: #cccccc;
+  }
+
+  /* Message when there is no movies */
+  .no-movies-message {
+    font-size: 1.2em;
+    color: #fbc02d;
+    margin-top: 20px;
+  }
+}
