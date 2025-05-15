@@ -12,7 +12,19 @@ It features a Flask-based API and a React frontend with pagination and live filt
 - Loader while fetching data
 - API built with Flask and SQLAlchemy
 - Fully tested backend and frontend
+  
+---
 
+## Previous Requirements
+
+You need to install Python 3.10 o superior.
+   - You can download it from: https://www.python.org/downloads/
+   - Verify that Python and Pip are correctly installed:
+     ```
+     python --version
+     pip --version
+     ```
+     
 ---
 
 ## 🛠️ Tech Stack
