@@ -7,11 +7,13 @@ import "./styles/App.css";
 const App = () => {
   const [allMovies, setAllMovies] = useState([]);
   const [movies, setMovies] = useState([]);
+  const [loading, setLoading] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
   const moviesPerPage = 12;
 
   useEffect(() => {
+    setLoading(true);
     const fetchMovies = async () => {
       try {
         const response = await fetch("http://127.0.0.1:5000/api/movies");
@@ -21,6 +23,8 @@ const App = () => {
         setMovies(sorted);
       } catch (error) {
         console.error("Error while getting the movies:", error);
+      } finally {
+        setLoading(false);
       }
     };
 
@@ -40,11 +44,17 @@ const App = () => {
     <div className="app-container">
       <h1>🎬 Movie Searcher</h1>
       <SearchBar searchQuery={searchQuery} handleSearch={handleSearch} />
-      <MovieList
-        movies={movies}
-        currentPage={currentPage}
-        moviesPerPage={moviesPerPage}
-      />
+      {loading ? (
+        <p>Loading...</p>
+      ) : (
+        movies && (
+          <MovieList
+            movies={movies}
+            currentPage={currentPage}
+            moviesPerPage={moviesPerPage}
+          />
+        )
+      )}
       <div className="pagination-container">
         <button
           onClick={() => setCurrentPage(currentPage - 1)}
