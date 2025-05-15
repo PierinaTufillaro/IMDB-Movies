@@ -64,7 +64,7 @@ Create and activate virtual environment
 ```bash
 cd server
 python -m venv env
-source env/bin/activate  # On Windows: .\env\Scripts\activate
+source venv/bin/activate  # On Windows: .\env\Scripts\activate
 ```
 
 Install dependencies
