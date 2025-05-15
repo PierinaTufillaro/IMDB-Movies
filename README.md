@@ -12,7 +12,22 @@ It features a Flask-based API and a React frontend with pagination and live filt
 - Loader while fetching data
 - API built with Flask and SQLAlchemy
 - Fully tested backend and frontend
+  
+---
 
+## ⚙️ Previous Requirements
+
+You need to install Python 3.10 or superior 1, Node.js.
+   - You can download Python from: https://www.python.org/downloads/
+   - You can downlooad Node from: https://nodejs.org
+   - Verify that Python, Pip, Node and npm are correctly installed:
+     ```
+     python --version
+     pip --version
+     node --version   
+     npm --version   
+     ```
+     
 ---
 
 ## 🛠️ Tech Stack
@@ -38,8 +53,8 @@ It features a Flask-based API and a React frontend with pagination and live filt
 ### 1. Clone the repo
 
 ```bash
-git clone https://github.com/your-username/movie-searcher.git
-cd movie-searcher
+git clone git@github.com:PierinaTufillaro/IMDB-Movies.git  
+cd IMDB-Movies
 ```
 
 ### 2. Backend set up
@@ -47,6 +62,7 @@ cd movie-searcher
 Create and activate virtual environment
 
 ```bash
+cd server
 python -m venv env
 source env/bin/activate  # On Windows: .\env\Scripts\activate
 ```
@@ -54,12 +70,22 @@ source env/bin/activate  # On Windows: .\env\Scripts\activate
 Install dependencies
 
 ```bash
-pip install -r requirements.txt
+pip3 install -r requirements.txt
+```
+
+.env File Configuration
+
+To ensure the application runs correctly, you need to create a file named `.env` in the server folder with the following environment variables:
+
+```env
+SECRET_KEY=your_secret_key_here
+DATABASE_URI=your_database_uri_here
 ```
 
 Run python script to populate database taking into account the movies on the IMDb_movies.csv
 
 ```bash
+cd server
 python3 import_csv.py
 ```
 
@@ -95,3 +121,15 @@ Frontend
 ```bash
 npm test
 ```
+
+## 🎥 Demo
+
+How the webapp works
+
+![Demo](server/assets/movie_searcher.gif)
+
+
+How the API works
+
+![Demo](server/assets/curl_requests.gif)
+
