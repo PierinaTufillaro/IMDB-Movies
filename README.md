@@ -71,7 +71,7 @@ python3 import_csv.py
 python3 run.py
 ```
 
-## By default, the API runs at: http://127.0.0.1:5000/api/movies
+By default, the API runs at: http://127.0.0.1:5000/api/movies
 
 ### 3. Frontend set up
 
@@ -81,18 +81,18 @@ npm install
 npm start
 ```
 
-## The frontend runs at: http://localhost:3000/
+The frontend runs at: http://localhost:3000/
 
 
 ## 🧪 Running Tests
 
-- Backend
+Backend
 
 ```bash
 python3 -m unittest discover
 ```
 
-- Frontend
+Frontend
 
 ```bash
 npm test
