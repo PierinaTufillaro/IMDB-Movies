@@ -86,13 +86,13 @@ npm start
 
 ## 🧪 Running Tests
 
-### Backend
+# Backend
 
 ```bash
 python3 -m unittest discover
 ```
 
-### Frontend
+# Frontend
 
 ```bash
 npm test
