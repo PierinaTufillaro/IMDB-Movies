@@ -59,7 +59,7 @@ pip install -r requirements.txt
 
 .env File Configuration
 
-To ensure the application runs correctly, you need to create a file named `.env` in the root of the project with the following environment variables:
+To ensure the application runs correctly, you need to create a file named `.env` in the server folder with the following environment variables:
 
 ```env
 SECRET_KEY=your_secret_key_here
