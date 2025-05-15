@@ -96,9 +96,11 @@ Frontend
 npm test
 ```
 
-## 🧠 Demo
+## 🎥 Demo
 
-
+How the webapp works
 ![Demo](server/assets/movie_searcher.gif)
 
+How the API works
+![Demo](server/assets/curl_requests.gif)
 
