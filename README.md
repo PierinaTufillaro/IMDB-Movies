@@ -95,3 +95,10 @@ Frontend
 ```bash
 npm test
 ```
+
+## 🧠 Demo
+
+
+![Demo](server/assets/movie_searcher.gif)
+
+
