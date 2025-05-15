@@ -13,7 +13,7 @@ def create_app():
         app: A Flask application instance.
     """
     app = Flask(__name__)
-    CORS(app)
+    CORS(app, origins=["http://localhost:3000"])
     app.config.from_object(Config)
     
     app.register_blueprint(movie_bp, url_prefix="/api")
