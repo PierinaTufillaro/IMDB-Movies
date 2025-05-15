@@ -47,6 +47,7 @@ cd IMDB-Movies
 Create and activate virtual environment
 
 ```bash
+cd server
 python -m venv env
 source env/bin/activate  # On Windows: .\env\Scripts\activate
 ```
@@ -69,6 +70,7 @@ DATABASE_URI=your_database_uri_here
 Run python script to populate database taking into account the movies on the IMDb_movies.csv
 
 ```bash
+cd server
 python3 import_csv.py
 ```
 
