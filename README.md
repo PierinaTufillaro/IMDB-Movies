@@ -57,12 +57,6 @@ Install dependencies
 pip install -r requirements.txt
 ```
 
-Run python script to populate database taking into account the movies on the IMDb_movies.csv
-
-```bash
-python3 import_csv.py
-```
-
 `.env` File Configuration
 
 To ensure the application runs correctly, you need to create a file named `.env` in the root of the project with the following environment variables:
@@ -70,6 +64,12 @@ To ensure the application runs correctly, you need to create a file named `.env`
 ```env
 SECRET_KEY=your_secret_key_here
 DATABASE_URI=your_database_uri_here
+```
+
+Run python script to populate database taking into account the movies on the IMDb_movies.csv
+
+```bash
+python3 import_csv.py
 ```
 
 Run Flask app
