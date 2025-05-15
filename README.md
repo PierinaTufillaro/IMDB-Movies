@@ -44,28 +44,26 @@ cd movie-searcher
 
 ### 2. Backend set up
 
-## Create and activate virtual environment
+Create and activate virtual environment
 
 ```bash
 python -m venv env
 source env/bin/activate  # On Windows: .\env\Scripts\activate
 ```
 
-## Install dependencies
+Install dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## Run python script to populate database taking
-
-## into account the movies on the IMDb_movies.csv
+Run python script to populate database taking into account the movies on the IMDb_movies.csv
 
 ```bash
 python3 import_csv.py
 ```
 
-## Run Flask app
+Run Flask app
 
 ```bash
 python3 run.py
