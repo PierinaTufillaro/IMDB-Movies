@@ -15,7 +15,7 @@ It features a Flask-based API and a React frontend with pagination and live filt
   
 ---
 
-## Previous Requirements
+## ⚙️ Previous Requirements
 
 You need to install Python 3.10 o superior.
    - You can download it from: https://www.python.org/downloads/
