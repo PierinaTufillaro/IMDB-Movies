@@ -57,7 +57,7 @@ Install dependencies
 pip install -r requirements.txt
 ```
 
-`.env` File Configuration
+.env File Configuration
 
 To ensure the application runs correctly, you need to create a file named `.env` in the root of the project with the following environment variables:
 
