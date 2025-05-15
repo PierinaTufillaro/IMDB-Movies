@@ -63,6 +63,15 @@ Run python script to populate database taking into account the movies on the IMD
 python3 import_csv.py
 ```
 
+`.env` File Configuration
+
+To ensure the application runs correctly, you need to create a file named `.env` in the root of the project with the following environment variables:
+
+```env
+SECRET_KEY=your_secret_key_here
+DATABASE_URI=your_database_uri_here
+```
+
 Run Flask app
 
 ```bash
