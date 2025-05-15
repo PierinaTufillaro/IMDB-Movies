@@ -17,12 +17,15 @@ It features a Flask-based API and a React frontend with pagination and live filt
 
 ## ⚙️ Previous Requirements
 
-You need to install Python 3.10 o superior.
-   - You can download it from: https://www.python.org/downloads/
-   - Verify that Python and Pip are correctly installed:
+You need to install Python 3.10 or superior 1, Node.js.
+   - You can download Python from: https://www.python.org/downloads/
+   - You can downlooad Node from: https://nodejs.org
+   - Verify that Python, Pip, Node and npm are correctly installed:
      ```
      python --version
      pip --version
+     node --version   
+     npm --version   
      ```
      
 ---
