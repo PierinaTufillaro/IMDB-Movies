@@ -38,8 +38,8 @@ It features a Flask-based API and a React frontend with pagination and live filt
 ### 1. Clone the repo
 
 ```bash
-git clone https://github.com/your-username/movie-searcher.git
-cd movie-searcher
+git clone git@github.com:PierinaTufillaro/IMDB-Movies.git  
+cd IMDB-Movies
 ```
 
 ### 2. Backend set up
