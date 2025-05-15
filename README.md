@@ -64,13 +64,13 @@ Create and activate virtual environment
 ```bash
 cd server
 python -m venv env
-source env/bin/activate  # On Windows: .\env\Scripts\activate
+source env/bin/activate  # On Windows: env\Scripts\activate
 ```
 
 Install dependencies
 
 ```bash
-pip3 install -r requirements.txt
+pip install -r requirements.txt
 ```
 
 .env File Configuration
@@ -86,13 +86,13 @@ Run python script to populate database taking into account the movies on the IMD
 
 ```bash
 cd server
-python3 import_csv.py
+python import_csv.py
 ```
 
 Run Flask app
 
 ```bash
-python3 run.py
+python run.py
 ```
 
 By default, the API runs at: http://127.0.0.1:5000/api/movies
@@ -113,7 +113,7 @@ The frontend runs at: http://localhost:3000/
 Backend
 
 ```bash
-python3 -m unittest discover
+python -m unittest discover
 ```
 
 Frontend
