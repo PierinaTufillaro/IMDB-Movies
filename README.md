@@ -70,7 +70,7 @@ source env/bin/activate  # On Windows: .\env\Scripts\activate
 Install dependencies
 
 ```bash
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 ```
 
 .env File Configuration
